@@ -41,7 +41,7 @@ public class Calc extends JFrame {
         getDivisores = new JButton("Divisores");
 
         resultLabel = new JLabel("Resultado:");
-        
+
         result = new JTextArea();
         result.setEditable(false);
         result.setWrapStyleWord(true);
@@ -80,6 +80,7 @@ public class Calc extends JFrame {
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                result.setText("");
                 input.setText("");
             }
         });
@@ -120,8 +121,6 @@ public class Calc extends JFrame {
                 resp[j]=aux%10;
                 transporte = aux/10;
             }
-
-
 
             while(transporte > 0){
                 resp[tamanho] = transporte%10;
